@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".administrador"
+    android:orientation="vertical"
+    android:padding="15dp"
+    android:gravity="center">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:id="@+id/pregunta"
+            android:hint=" Escriba una pregunta ">
+
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:id="@+id/opcion1"
+            android:hint="opcion 1 ">
+
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:id="@+id/opcion2"
+            android:hint="opcion 2 ">
+
+        </EditText>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:id="@+id/opcion3"
+            android:hint="opcion 3 ">
+
+        </EditText>
+        <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textSize="25sp"
+        android:id="@+id/OpcionCorrecta"
+        android:hint ="OpcionCorrecta">
+
+        </EditText>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="25sp"
+            android:id="@+id/Puntos"
+            android:hint ="Puntos">
+
+        </EditText>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Guardar"
+            android:text="Guardar"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/XD"
+            android:layout_marginTop="25dp">
+
+        </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/preguntas"
+            android:text="preguntas"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/XD"
+            android:layout_marginTop="25dp">
+
+        </Button>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Regresar"
+            android:text="Regresar"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:backgroundTint="@color/XD"
+            android:layout_marginTop="25dp">
+
+        </Button>
+
+
+    </LinearLayout>
+
+</LinearLayout>
