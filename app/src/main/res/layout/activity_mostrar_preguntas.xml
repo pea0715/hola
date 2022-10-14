@@ -5,7 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MostrarPreguntas"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@drawable/azul">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -14,21 +15,27 @@
         android:gravity="center">
         <ListView
             android:layout_width="match_parent"
-            android:layout_height="600dp"
+            android:layout_height="550sp"
             android:id="@+id/preguntasvistas">
         </ListView>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
         <Button
-            android:layout_width="match_parent"
+            android:layout_width="120dp"
             android:layout_height="wrap_content"
             android:id="@+id/Regresar"
             android:text="Regresar"
-            android:textSize="20sp"
+            android:textSize="15sp"
             android:textColor="@color/white"
-            android:backgroundTint="@color/XD"
-            android:layout_marginTop="25dp">
+            android:backgroundTint="#fa5f49"
+            android:layout_marginTop="12dp">
 
         </Button>
+    </LinearLayout>
 
     </LinearLayout>
 

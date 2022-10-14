@@ -7,7 +7,8 @@
     tools:context=".menu"
     android:orientation="vertical"
     android:padding="15dp"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="@drawable/azul">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -31,7 +32,7 @@
             android:text="Administrador"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:backgroundTint="@color/XD"
+            android:backgroundTint="#fa5f49"
             android:layout_marginTop="25dp">
 
         </Button>
@@ -43,7 +44,7 @@
             android:text="Jugador"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:backgroundTint="@color/XD"
+            android:backgroundTint="#fa5f49"
             android:layout_marginTop="15dp">
 
         </Button>
@@ -54,7 +55,7 @@
             android:text="Puntaje"
             android:textSize="20sp"
             android:textColor="@color/white"
-            android:backgroundTint="@color/XD"
+            android:backgroundTint="#fa5f49"
             android:layout_marginTop="15dp">
 
         </Button>
