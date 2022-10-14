@@ -1,6 +1,7 @@
 package com.example.preguntitasv2;
 
 public class Preguntas {
+    private int id;
     private String Pregunta;
     private String Opcion1;
     private String Opcion2;
@@ -8,13 +9,22 @@ public class Preguntas {
     private String Correcta;
     private int Puntuacion;
 
-    public Preguntas(String pregunta, String opcion1, String opcion2, String opcion3, String correcta, int puntuacion) {
+    public Preguntas(int id, String pregunta, String opcion1, String opcion2, String opcion3, String correcta, int puntuacion) {
+        this.id = id;
         Pregunta = pregunta;
         Opcion1 = opcion1;
         Opcion2 = opcion2;
         Opcion3 = opcion3;
         Correcta = correcta;
         Puntuacion = puntuacion;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getPregunta() {

@@ -18,7 +18,8 @@ public class prueba extends AppCompatActivity {
     ArrayAdapter adapter;
     ListView Podio;
     Button Regresar;
-    ArchivoPuntuacion objAP = new ArchivoPuntuacion(this);
+    //ArchivoPuntuacion objAP = new ArchivoPuntuacion(this);
+    CrudPuntaje crud1 = new CrudPuntaje(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -40,7 +41,7 @@ public class prueba extends AppCompatActivity {
         Regresar = findViewById(R.id.Regresar);
     }
     public void adaptar(){
-        Puntos = objAP.GuardarPuntos();
+        Puntos = crud1.MostrarPuntaje();
         Collections.sort(Puntos, new Comparator<PuntuacioFinal>() {
             @Override
             public int compare(PuntuacioFinal S1, PuntuacioFinal S2) {

@@ -1,12 +1,22 @@
 package com.example.preguntitasv2;
 
 public class PuntuacioFinal {
+    public int id;
     public String nombre;
     public String puntos;
 
-    public PuntuacioFinal(String nombre, String puntos) {
+    public PuntuacioFinal(int id, String nombre, String puntos) {
+        this.id = id;
         this.nombre = nombre;
         this.puntos = puntos;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {

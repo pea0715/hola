@@ -29,7 +29,9 @@ public class MainActivity extends AppCompatActivity {
     Random random = new Random();
     ArrayList<Preguntas> NumeroPreguntas = new ArrayList();
     public int PreguntasBuenas ;
-    ArchivoPuntuacion objAp = new ArchivoPuntuacion(this);
+    //ArchivoPuntuacion objAp = new ArchivoPuntuacion(this);
+    CrudPreguntas crud = new CrudPreguntas(this);
+    CrudPuntaje crud1 = new CrudPuntaje(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -236,8 +238,7 @@ public class MainActivity extends AppCompatActivity {
 
     public void CrearPreguntas(){
 
-        ArchivoPlanoPreguntas plano = new ArchivoPlanoPreguntas(this);
-        NumeroPreguntas = plano.GuardarPreguntas();
+        NumeroPreguntas = crud.RecuperarRegistros();
 
 
         /**
@@ -349,15 +350,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void CrearPuntos(String n , String p) {
-        String GuardarPuntos = n + "," + p + "/" ;
-        try{
-            objAp.Escribir(GuardarPuntos);
-        }
-        catch ( IOException ex)
-        {
-            ex.getMessage();
-        }
-
+        crud1.Agregar(n,p);
     }
 
 

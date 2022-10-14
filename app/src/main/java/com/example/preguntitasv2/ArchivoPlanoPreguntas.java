@@ -1,4 +1,4 @@
-package com.example.preguntitasv2;
+/**package com.example.preguntitasv2;
 
 import android.content.Context;
 import android.util.Log;
@@ -66,5 +66,5 @@ public class ArchivoPlanoPreguntas {
         return ao;
         }
 
-
 }
+*/

@@ -14,7 +14,10 @@ import java.io.IOException;
 public class administrador extends AppCompatActivity {
     EditText pregunta, opcion1, opcion2, opcion3, OpcionCorrecta, Puntos;
     Button Guardar,preguntas,Regresar;
-    String Pregunta,Opcion1, Opcion2, Opcion3, OpcionConrrecta,puntos;
+    String Pregunta,Opcion1, Opcion2, Opcion3, OpcionConrrecta;
+    int puntos;
+    CrudPreguntas crud = new CrudPreguntas(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,7 +25,7 @@ public class administrador extends AppCompatActivity {
         setContentView(R.layout.activity_administrador);
         conectar();
 
-        ArchivoPlanoPreguntas objAp = new ArchivoPlanoPreguntas(this);
+        //ArchivoPlanoPreguntas objAp = new ArchivoPlanoPreguntas(this);
         Guardar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -30,19 +33,12 @@ public class administrador extends AppCompatActivity {
                 Opcion1 = opcion1.getText().toString();
                 Opcion2 = opcion2.getText().toString();
                 Opcion3 = opcion3.getText().toString();
-                puntos = Puntos.getText().toString();
                 OpcionConrrecta = OpcionCorrecta.getText().toString();
+                puntos = Integer.parseInt(Puntos.getText().toString());
 
-                String GuardarPreguntas = Pregunta + "," + Opcion1 +"," + Opcion2 +","+ Opcion3 +","+ OpcionConrrecta + "," + puntos + "/" ;
-
-
-                try{
-                    objAp.Escribir(GuardarPreguntas);
-                }
-                catch ( IOException ex)
-                {
-                    ex.getMessage();
-                }
+                //String GuardarPreguntas = Pregunta + "," + Opcion1 +"," + Opcion2 +","+ Opcion3 +","+ OpcionConrrecta + "," + puntos + "/" ;
+                 crud.Agregar(Pregunta, Opcion1, Opcion2,Opcion3,OpcionConrrecta, puntos);
+                Toast.makeText(administrador.this, "se guardo la pregunta", Toast.LENGTH_SHORT).show();
 
             }
         });
